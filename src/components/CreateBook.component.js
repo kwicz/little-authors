@@ -4,11 +4,17 @@ export default class CreateBook extends Component {
 
   constructor(props) {
     super(props);
+
+    this.onChangeBookTitle = this.onChangeBookTitle.bind(this);
+    this.onChangeBookAuthor = this.onChangeBookAuthor.bind(this);
+    this.onChangeBookDescription = this.onChangeBookDescription.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
         book_title: '',
         book_author: '',
         book_description : '',
-        book_completed: false
+        book_completed: false, 
     }
   }
 
@@ -74,7 +80,7 @@ onSubmit(e) {
                                 type="text" 
                                 className="form-control"
                                 value={this.state.book_description}
-                                onChange={this.onChangeBookAuthor}
+                                onChange={this.onChangeBookDescription}
                                 />
                     </div>
                     <div className="form-group">
