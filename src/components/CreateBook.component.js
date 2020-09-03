@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateBook extends Component {
 
@@ -43,6 +44,16 @@ onSubmit(e) {
   console.log(`Book Title: ${this.state.book_title}`);
   console.log(`Book Author: ${this.state.book_author}`);
   console.log(`Book Description: ${this.state.book_description}`);
+
+  const newBook = {
+      book_title: this.state.book_title,
+      book_author: this.state.book_author,
+      book_description: this.state.book_description,
+      book_completed: this.state.book_completed
+  };
+
+  axios.post('http://localhost:4000/books/add', newBook)
+    .then(res => console.log(res.data));
   
   this.setState({
       book_title: '',
