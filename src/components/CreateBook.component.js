@@ -49,7 +49,8 @@ onSubmit(e) {
       book_title: this.state.book_title,
       book_author: this.state.book_author,
       book_description: this.state.book_description,
-      book_completed: this.state.book_completed
+      book_completed: this.state.book_completed, 
+      book_pages: []
   };
 
   axios.post('http://localhost:4000/books/add', newBook)

@@ -23,7 +23,7 @@ class App extends Component {
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/home" className="nav-link">Home Page</Link>
+                  <Link to="/home" className="nav-link">Book List</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">Create Book</Link>

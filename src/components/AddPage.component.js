@@ -41,8 +41,8 @@ onSubmit(e) {
       page_image: this.state.page_image,
   };
 
-  // axios.post('http://localhost:4000/books/add', newPage)
-  //   .then(res => console.log(res.data));
+  axios.post('http://localhost:4000/books/addpage'+this.props.match.params.id, newPage)
+    .then(res => console.log("Response data: ", res.data));
   
   this.setState({
       page_text: '',
