@@ -5,6 +5,9 @@ import '../App.css'
 import CreateBook from "./CreateBook.component";
 import EditBook from "./EditBook.component";
 import BookList from "./BookList.component";
+import Landing from "./Landing.component";
+import AddPage from "./AddPage.component";
+import ReadBook from "./ReadBook.component";
 
 class App extends Component {
   render() {
@@ -19,7 +22,7 @@ class App extends Component {
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Home</Link>
+                  <Link to="/home" className="nav-link">Home Page</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">Create Book</Link>
@@ -28,11 +31,15 @@ class App extends Component {
             </div>
           </nav>
           <br/>
-          <Route path="/" exact component={BookList} />
+          <Route path="/" exact component={Landing} />
+          <Route path="/home" exact component={BookList} />
           <Route path="/edit/:id" component={EditBook} />
           <Route path="/create" component={CreateBook} />
+          <Route path="/addpage/:id" component={AddPage} />
+          <Route path="/read/:id" component={ReadBook} />
         </div>
       </Router>
+
     );
   }
 }

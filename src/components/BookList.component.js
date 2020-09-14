@@ -8,7 +8,11 @@ const Book   = props => (
         <td>{props.book.book_author}</td>
         <td>{props.book.book_description}</td>
         <td>
-            <Link to={"/edit/"+props.book._id}>Edit</Link>
+            <Link to={"/edit/"+props.book._id}>Edit Book</Link>
+            <br />
+            <Link to={"/addpage/"+props.book._id}>Add Page</Link>
+            <br />
+            <Link to={"/read/"+props.book._id}>Read Book</Link>
         </td>
     </tr>
 )
@@ -43,9 +47,9 @@ export default class BooksList extends Component {
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                         <tr>
-                            <th>title</th>
-                            <th>author</th>
-                            <th>description</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Description</th>
                             <th>Action</th>
                         </tr>
                     </thead>

@@ -73,6 +73,7 @@ export default class EditBook extends Component {
         
         this.props.history.push('/');
     }
+    
 
     render() {
         return (
